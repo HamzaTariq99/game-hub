@@ -1,6 +1,6 @@
-import  Genre  from "./Genre";
-import  Platform  from "./Platform";
-import  Publisher  from "./Publisher";
+import Genre from "./Genre";
+import Platform from "./Platform";
+import Publisher from "./Publisher";
 
 //array ky object main kya kya ho ga
 
