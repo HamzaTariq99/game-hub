@@ -2,20 +2,11 @@ import { useInfiniteQuery, } from "@tanstack/react-query";
 import ms from 'ms';
 import APIClient, { FetchResponse } from "../services/api-client";
 import useGameQueryStore from '../store';
-import { Platform } from './usePlatforms';
+import { Game } from "../entities/Game";
 
 const apiClient  = new APIClient<Game>('/games');
 
 
-//array ky object main kya kya ho ga
-export interface Game {
-    id: number;
-    name: string;
-    background_image: string,
-    parent_platforms: {platform: Platform}[],
-    metacritic: number,
-    rating_top: number
-  }
   //idr fetch is liye ky to tell the type of the data that useQuery expects from the queryFn
   const useGames = () => {
    const gameQuery=  useGameQueryStore(s=>s.gameQuery);
