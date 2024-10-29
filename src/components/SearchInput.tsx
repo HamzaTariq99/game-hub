@@ -4,9 +4,6 @@ import { BsSearch } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import useGameQueryStore from "../store";
 
-// interface Props {
-//   onSearch: (SearchText: string) => void;
-// }
 const SearchInput = () => {
   const ref = useRef<HTMLInputElement>(null);
   const setSearchText = useGameQueryStore((s) => s.setSearchText);
